@@ -1,0 +1,75 @@
+<template>
+
+  <lightning-card>
+
+      Example of how to test a formula with eval from Apex
+
+
+      <div class="slds-grid slds-wrap">
+          <div class="slds-col slds-large-size_3-of-12 slds-p-horizontal_medium">
+            <span><lightning-combobox label="Choose a formula type" options={options} onchange={handleChange}></lightning-combobox></span>
+          </div>
+          <div class="slds-col slds-large-size_3-of-12 slds-p-horizontal_medium">
+            <span><lightning-input label="Put the record Id target" onchange={setRecordId}></lightning-input></span>
+          </div>
+          <div class="slds-col slds-large-size_3-of-12 slds-p-horizontal_medium">
+            <span><lightning-input label="Put the record Id target" onchange={setRecordId2}></lightning-input></span>
+          </div>
+      </div>
+      <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-large-size_3-of-12 slds-p-horizontal_medium">
+              <span><lightning-textarea name="formula1" label="Your formula" onchange={setValue1}></lightning-textarea></span>
+            </div>
+            <div class="slds-col slds-large-size_3-of-12  slds-p-horizontal_medium">
+              <span><lightning-textarea name="result1" label="result of the formula" value={result1}></lightning-textarea></span>
+          </div>
+          <template if:true={recordId2}>
+            <div class="slds-col slds-large-size_3-of-12  slds-p-horizontal_medium">
+              <span><lightning-textarea name="result1" label="result of the formula" value={result21}></lightning-textarea></span>
+            </div>
+          </template>
+
+      </div>
+      <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-large-size_3-of-12  slds-p-horizontal_medium">
+          <span><lightning-textarea name="formula2" label="Your formula" onchange={setValue2}></lightning-textarea></span>
+            </div>
+            <div class="slds-col slds-large-size_3-of-12  slds-p-horizontal_medium">
+              <span><lightning-textarea name="result2" label="result of the formula" value={result2}></lightning-textarea></span>
+            </div>
+            <template if:true={recordId2}>
+              <div class="slds-col slds-large-size_3-of-12  slds-p-horizontal_medium">
+                <span><lightning-textarea name="result1" label="result of the formula" value={result22}></lightning-textarea></span>
+              </div>
+            </template>
+      </div>
+      
+
+      <br/><br/>
+      <div class="slds-grid slds-wrap">
+          <div class="slds-col slds-large-size_6-of-12 slds-p-horizontal_medium">
+            <span>
+              <div class="slds-form-element">
+                <label class="slds-checkbox_toggle slds-grid">
+                  <span class="slds-form-element__label slds-m-bottom_none">Restrict the formula to fields available to user (aka disable system mode) :</span>
+                  <input type="checkbox" name="checkbox-toggle-16" value="checkbox-toggle-16" aria-describedby="checkbox-toggle-16" onclick={setOptionalFields}/>
+                  <span id="checkbox-toggle-16" class="slds-checkbox_faux_container">
+                    <span class="slds-checkbox_faux"></span>
+                    <span class="slds-checkbox_on">Enabled</span>
+                    <span class="slds-checkbox_off">Disabled</span>
+                  </span>
+                </label>
+              </div>
+            </span>
+        </div>
+      </div>
+      <br/><br/>
+      <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-large-size_6-of-12">
+          <lightning-button class="slds-align_absolute-center" label="calculate results" onclick={calculate}></lightning-button>
+        </div>
+      </div>
+
+  </lightning-card>
+  
+</template>

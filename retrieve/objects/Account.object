@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Account_Rating_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+    Territory__r.Name = &quot;AMER&quot;,
+    IF(
+        AnnualRevenue &gt; 9000,
+        &quot;Excellent&quot;,
+        IF(
+            AnnualRevenue &gt; 8000,
+            &quot;Good&quot;,
+            &quot;Poor&quot;
+        )
+    ),
+    IF(
+        Territory__r.Name = &quot;APAC&quot;,
+        IF(
+            AnnualRevenue &gt; 15000,
+            &quot;Excellent&quot;,
+            IF(
+                AnnualRevenue &gt; 10000,
+                &quot;Good&quot;,
+                &quot;Poor&quot;
+            )
+        ),
+        IF(
+            Territory__r.Name = &quot;EMEA&quot;,
+            IF(
+                AnnualRevenue &gt; 12000,
+                &quot;Excellent&quot;,
+                IF(
+                    AnnualRevenue &gt; 9000,
+                    &quot;Good&quot;,
+                    &quot;Poor&quot;
+                )
+            ),
+            IF(
+                Territory__r.Name = &quot;LATAM&quot;,
+                IF(
+                    AnnualRevenue &gt; 10000,
+                    &quot;Excellent&quot;,
+                    IF(
+                        AnnualRevenue &gt; 7000,
+                        &quot;Good&quot;,
+                        &quot;Poor&quot;
+                    )
+                ),
+                NULL
+            )
+        )
+    )
+)</formula>
+        <label>Account Rating Formula</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Rating__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Rating Apex</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annual_Recurring_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Recurring Revenue</label>
+        <summarizedField>Opportunity.Amount</summarizedField>
+        <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Applicable_Discount__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Loyalty_Tier__c =&quot;Gold&quot;, 0.15,
+IF(Loyalty_Tier__c =&quot;Silver&quot;, 0.1,0.05))</formula>
+        <label>Applicable Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Loyalty_Tier__c</fullName>
+        <externalId>false</externalId>
+        <label>Loyalty Tier</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Territory__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Territory</label>
+        <referenceTo>Territory__c</referenceTo>
+        <relationshipLabel>Accounts</relationshipLabel>
+        <relationshipName>Accounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+</CustomObject>

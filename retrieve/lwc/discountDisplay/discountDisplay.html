@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Applicable Discount">
+        <div class="slds-p-around_medium" style="text-align: center;">
+            <template if:true={account.data}>
+                <div style="font-size: 2rem; font-weight: bold; color: #2B8EAD;">
+                     <span>{account.data.fields.Applicable_Discount__c.value}%</span>
+                </div>
+            </template>
+            <template if:true={account.error}>
+                <div style="color: #e00000; font-weight: bold;">
+                    Error: {account.error.message}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
