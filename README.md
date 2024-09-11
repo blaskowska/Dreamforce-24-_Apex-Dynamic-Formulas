@@ -2,7 +2,7 @@
 This repository includes all resources and code used for the presentation "Discover What's New in Formulas for Admins and Developers" presented during Dreamforce 2024. </br>
 </br>
 # Einstein For Formulas - Resources</br>
-# Apex Dynamic Fomrulas - Resources</br>
+# Apex Dynamic Formulas - Resources</br>
 The project aims to show the value of Apex Dynamic Formula Eval [introduced in Spring 24' in Beta](https://help.salesforce.com/s/articleView?id=release-notes.rn_apex_formulaeval.htm&release=248&type=5)
 
 
