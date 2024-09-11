@@ -51,22 +51,7 @@
             )
         )
     )
-)</formula>
-        <label>Account Rating Formula</label>
-        <required>false</required>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Account_Rating__c</fullName>
-        <externalId>false</externalId>
-        <label>Account Rating Apex</label>
-        <length>18</length>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
+)
     <fields>
         <fullName>Annual_Recurring_Revenue__c</fullName>
         <externalId>false</externalId>
