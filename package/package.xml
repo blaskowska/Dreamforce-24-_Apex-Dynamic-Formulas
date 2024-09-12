@@ -31,10 +31,7 @@
         <members>Order.TotalAmount</members>
         <members>Product2.Family</members>
         <members>Territory__c.Discount__c</members>
-        <members>Territory__c.Inflation_Rate__c</members>
-        <members>Territory__c.Loyalty_Inflation_Tier_Formula__c</members>
         <members>Territory__c.Loyalty_Tier_Formula__c</members>
-        <members>Territory__c.Rating_Formula__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -50,7 +47,6 @@
         <name>FlexiPage</name>
     </types>
     <types>
-        <members>discountDisplay</members>
         <members>evalApexDemo</members>
         <name>LightningComponentBundle</name>
     </types>
