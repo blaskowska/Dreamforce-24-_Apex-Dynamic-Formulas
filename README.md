@@ -17,4 +17,6 @@ The project aims to show the value of Apex Dynamic Formula Eval:</br>
 
 In the demo, the following objects and fields were used:</br>
 1. Territory_c with field Loyalty_Tier_Formula__c</br>
-2. Account with fields Territory__c, Loyalty_Tiers__c, Annual_Recurring_Revenue__c, Applicable_Discount__c 
+2. Account with fields Territory__c, Loyalty_Tiers__c, Annual_Recurring_Revenue__c, Applicable_Discount__c </br>
+</br>
+The LWC component to dynamically evaluate formula expression defined on UI was written by Fabrice Challier, an extraordinary Trailblazer from the French Community.
