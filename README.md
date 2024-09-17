@@ -15,6 +15,6 @@ The project aims to show the value of Apex Dynamic Formula Eval:</br>
 -[FormulaEval](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_namespace_formulaeval.htm)</br>
 
 
-Main custom objects used in demo:</br>
-1. Territory_c with field Loyalty_Tier_Formula__c
-2. 
+In the demo, the following objects and fields were used:</br>
+1. Territory_c with field Loyalty_Tier_Formula__c</br>
+2. Account with fields Territory__c, Loyalty_Tiers__c, Annual_Recurring_Revenue__c, Applicable_Discount__c 
