@@ -12,7 +12,7 @@ Winter '25: Create flow formulas with Einstein: https://help.salesforce.com/s/ar
 The project aims to show the value of Apex Dynamic Formula Eval:</br>
 -[Spring 24' Release Note](https://help.salesforce.com/s/articleView?language=en_US&id=release-notes.rn_apex_formulaeval.htm&release=248&type=5)</br>
 -[Summer 24' Release Note](https://help.salesforce.com/s/articleView?id=release-notes.rn_apex_formulaeval.htm&release=248&type=5)</br>
--[FormulaEval](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_namespace_formulaeval.htm)</br>
+-[FormulaEval namespace](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_namespace_formulaeval.htm)</br>
 
 
 In the demo, the following objects and fields were used:</br>
